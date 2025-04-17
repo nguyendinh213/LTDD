@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Cho phép tất cả các kết nối HTTP trong quá trình phát triển (không bảo mật) -->
+    <domain-config cleartext-trafffic-permitted="true">
+        <domain includeSubdomains="true">app.iotstar.vn</domain>
+    </domain-config>
+
+    <!-- Cấu hình cho các máy chủ sử dụng SSL (https) -->
+
+</network-security-config>

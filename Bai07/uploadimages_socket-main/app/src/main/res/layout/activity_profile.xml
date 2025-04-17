@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileActivity"
+    android:background="#FDF1E9">
+
+        <TextView
+            android:id="@+id/login_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Welcome to Profile"
+            android:textColor="#E96D35"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_slogan" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView">
+
+            <!-- Add your table rows here -->
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_userid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="User ID"
+                    android:textColor="#E96D35"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_userid_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="User id"
+                    android:textColor="#8F8F8F"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_firstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="FirstName"
+                    android:textColor="#E96D35"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_firstName_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="FirstName"
+                    android:textColor="#8F8F8F"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_lastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="LastName"
+                    android:textColor="#E96D35"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_lastName_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="LastName"
+                    android:textColor="#8F8F8F"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Email"
+                    android:textColor="#E96D35"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_email_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="Email"
+                    android:textColor="#8F8F8F"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Gender"
+                    android:textColor="#E96D35"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_gender_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="Gender"
+                    android:textColor="#8F8F8F"
+                    android:textSize="18sp" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+            android:layout_marginTop="100dp"
+            android:weightSum="2"
+            >
+            <Button
+                android:id="@+id/button_logout"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#E96D35"
+                android:text="Log out"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="30dp"
+                 />
+
+            <Button
+                android:id="@+id/btn_category"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#E96D35"
+                android:text="Category"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                 />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
